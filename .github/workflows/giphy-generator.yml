@@ -22,8 +22,8 @@ jobs:
         rating: 'g'
         lang: 'en' 
     - name: Run a multi-line script
-      run: |
-        echo what is in this directory?
+      run:
+        echo What is in this directory?
         ls -a
         echo
         echo Is Java installed?
