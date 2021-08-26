@@ -2,13 +2,13 @@ name: GIPHY generator
 
 on: 
   issues:
-    branch: [terrytownsend-patch-1]
+    branches: [ terrytownsend-patch-1 ]
     types: [opened, edited]
   pull_request:
-    branch: [terrytownsend-patch-1]
+    branches: [ terrytownsend-patch-1 ]
     types: [opened, edited]
   issue_comment:
-    branch: [terrytownsend-patch-1]
+    branches: [ terrytownsend-patch-1 ]
     types: [created, edited]  
 jobs:
   giphy-generator:
