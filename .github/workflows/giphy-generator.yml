@@ -10,6 +10,7 @@ on:
   issue_comment:
     branches: [ terrytownsend-patch-1 ]
     types: [created, edited]  
+  workflow_dispatch:
 jobs:
   giphy-generator:
     runs-on: ubuntu-latest
