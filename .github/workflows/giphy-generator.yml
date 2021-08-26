@@ -33,4 +33,5 @@ jobs:
         echo
         echo Is gradle installed?
         gradle --version
+        echo Hello Jeff W.
         
