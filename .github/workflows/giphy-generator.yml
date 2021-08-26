@@ -2,6 +2,7 @@ name: GIPHY generator
 
 on: 
   workflow_dispatch:
+  
 jobs:
   giphy-generator:
     runs-on: ubuntu-latest
