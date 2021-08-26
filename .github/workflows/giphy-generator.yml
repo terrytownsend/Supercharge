@@ -21,7 +21,7 @@ jobs:
         rating: 'g'
         lang: 'en' 
     - name: Run a multi-line script
-      run:
+      run: |
         echo What is in this directory?
         ls -a
         echo
