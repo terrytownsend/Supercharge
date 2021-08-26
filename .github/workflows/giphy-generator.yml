@@ -1,12 +1,12 @@
 name: GIPHY generator
 
 on: 
-  push:
-    branches: [ terrytownsend-patch-1 ]
+  issues:
+    types: [opened, edited]
   pull_request:
     types: [opened, edited]
-    branches: [ terrytownsend-patch-1 ]
-    
+  issue_comment:
+    types: [created, edited]  
 jobs:
   giphy-generator:
     runs-on: ubuntu-latest
@@ -14,7 +14,7 @@ jobs:
     steps:
     - name: GIPHY Generator
       id: giphy_generator
-      uses: iamhughes/giphy-generator@master
+      uses: iamhughes/giphy-generator@V1
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }} # This token should be created on giphy.com: https://developers.giphy.com/dashboard/?create=true
