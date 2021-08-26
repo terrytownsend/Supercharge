@@ -21,3 +21,17 @@ jobs:
       with:
         rating: 'g'
         lang: 'en' 
+    - name: Run a multi-line script
+      run: |
+        echo what is in this directory?
+        ls -a
+        echo
+        echo Is Java installed?
+        java -version
+        echo
+        echo Is git installed?
+        git --version
+        echo
+        echo Is gradle installed?
+        gradle --version
+        
