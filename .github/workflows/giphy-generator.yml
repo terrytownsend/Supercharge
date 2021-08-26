@@ -1,12 +1,11 @@
 name: GIPHY generator
 
 on: 
-  issues: 
-    types: [opened, edited]
+  push:
+    branches: [ terrytownsend-patch-1 ]
   pull_request:
     types: [opened, edited]
-  issue_comment:
-    types: [created, edited]
+    branches: [ terrytownsend-patch-1 ]
     
 jobs:
   giphy-generator:
