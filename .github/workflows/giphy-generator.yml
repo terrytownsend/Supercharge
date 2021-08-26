@@ -1,0 +1,35 @@
+name: GIPHY generator
+
+on: 
+  workflow_dispatch:
+  
+jobs:
+  giphy-generator:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: GIPHY Generator
+      id: giphy_generator
+      uses: iamhughes/giphy-generator@v1.0.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }} # This token should be created on giphy.com: https://developers.giphy.com/dashboard/?create=true
+      with:
+        rating: 'g'
+        lang: 'en' 
+    - name: Run a multi-line script
+      run: |
+        echo What is in this directory?
+        ls -a
+        echo
+        echo Is Java installed?
+        java -version
+        echo
+        echo Is git installed?
+        git --version
+        echo
+        echo Is gradle installed?
+        gradle --version
+        echo Hello Jeff W.
+        echo More info...
+        
